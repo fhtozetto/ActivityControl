@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  database:
+    image: postgres
+    container_name: database_activity_control
+    restart: "no"
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=m3jkpn7b
+      - POSTGRES_DB=activity_control
+    volumes:
+      - pgdata:/data/postgres
+
+  app:
+    build: .
+    container_name: activity_control_app
+    restart: "no"
+    ports: 
+      - 3333:3333
+      - 9229:9229
+    volumes:
+      - .:/usr/app
+    links:
+      - database
+    depends_on: 
+      - database
+
+volumes:
+  pgdata:
+    driver: local

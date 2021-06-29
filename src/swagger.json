@@ -1,0 +1,11 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Activity Control",
+    "description": "this is an Activity Control API",
+    "version": "1.0.0",
+    "contact": {
+      "email": "fhtozetto@gmail.com"
+    }
+  }
+}
