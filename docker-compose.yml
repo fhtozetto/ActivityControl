@@ -16,7 +16,7 @@ services:
 
   app:
     build: .
-    container_name: activity_control_app
+    container_name: activity_control
     restart: "no"
     ports: 
       - 3333:3333
