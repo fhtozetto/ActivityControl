@@ -26,10 +26,11 @@ Combinando as melhores práticas de SOLID, testes unitários e testes de integra
 
 ## Cadastro de Empresas
 **Requisitos Funcionais (RF)**
-- [ ] Deve ser possível cadastrar uma nova empresa.
+- [x] Deve ser possível cadastrar uma nova empresa.
 
 **Regra de Negócios (RN)**
 - [ ] Apenas os usuários administradores poderão cadastrar novas empresas.
+- [x] Não deve ser possível cadastrar um CNPJ já existente.
 
 ## Cadastro de Departamentos
 **Requisitos Funcionais (RF)**
