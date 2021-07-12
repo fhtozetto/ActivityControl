@@ -12,7 +12,7 @@ class FindCompanyByCnpjController {
 
     const company = await findCompanyByCnpjUseCase.execute(cnpj);
 
-    return response.status(201).json(company);
+    return response.json(company);
   }
 }
 
