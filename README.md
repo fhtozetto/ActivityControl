@@ -4,7 +4,7 @@ Está aplicação backend será responsável por controlar o cadastro das tarefa
 Combinando as melhores práticas de SOLID, testes unitários e testes de integração, com o intuito de garantir maior confiabilidade no serviço.
 
 Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas do banco de dados ao concluir o projeto.
-![Cat](https://raw.githubusercontent.com/fhtozetto/ActivityControl-Backend/f154e25c78d678ba5b1dab5fcd4dfa356a06167a/data_model.png)
+![Cat](https://raw.githubusercontent.com/fhtozetto/ActivityControl-Backend/master/data_model.png)
 
 ## Cadastro de Usuários
 
@@ -48,7 +48,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 - [x] Deve ser possível cadastrar uma nova empresa.
 - [ ] Deve ser possível alterar o cadastro da empresa.
 - [ ] Deve ser possível localizar uma empresa pelo nome.
-- [ ] Deve ser possível localizar uma empresa pelo cnpj.
+- [x] Deve ser possível localizar uma empresa pelo cnpj.
 
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de empresa.
