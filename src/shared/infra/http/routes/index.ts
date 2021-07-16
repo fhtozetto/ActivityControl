@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
+import { accountRoutes } from './account.routes';
 import { companyRoutes } from './company.routes';
-import { sectorRoutes } from './sector.routes';
 
 const router = Router();
 
-router.use('/sector', sectorRoutes);
 router.use('/company', companyRoutes);
+router.use('/account', accountRoutes);
 
 export { router };
