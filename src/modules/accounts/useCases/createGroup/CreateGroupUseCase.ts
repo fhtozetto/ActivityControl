@@ -16,14 +16,14 @@ class CreateGroupUseCase {
     private groupsRepository: GroupsRepository,
   ) {}
 
-  async execute({ id, name }: IRequest): Promise<Group> {
+  async execute({ name }: IRequest): Promise<Group> {
     const groupAlreadyExists = await this.groupsRepository.findByName(name);
 
-    if (!id && groupAlreadyExists) {
+    if (groupAlreadyExists) {
       throw new AppError('Group already exists!');
     }
 
-    const group = this.groupsRepository.create({ id, name });
+    const group = this.groupsRepository.create({ name });
 
     return group;
   }
