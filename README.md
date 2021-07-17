@@ -9,8 +9,8 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 ## Cadastro de conta
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar uma conta.
-- [ ] Deve ser possível alterar os dados de uma conta
-.
+- [ ] Deve ser possível alterar os dados de uma conta.
+
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de conta.
 - [ ] Criar teste de integração do cadastro de conta.
@@ -19,8 +19,8 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 
 ## Cadastro de grupo
 **Requisitos Funcionais (RF)**
-- [ ] Deve ser possível cadastrar um grupo.
-- [ ] Deve ser possível alterar os dados de um grupo.
+- [x] Deve ser possível cadastrar um grupo.
+- [x] Deve ser possível alterar os dados de um grupo.
 - [ ] Deve ser possível excluir um grupo. 
 
 **Requisitos Não Funcionais (RNF)**
