@@ -14,15 +14,19 @@ class CompaniesRepository implements ICompaniesRepository {
 
   async create({
     id,
-    code_name,
+    account_id,
+    group_id,
     name,
     cnpj,
+    code_name,
   }: ICreateCompanyDTO): Promise<Company> {
     const company = await this.repository.create({
       id,
-      code_name,
+      account_id,
+      group_id,
       name,
       cnpj,
+      code_name,
     });
 
     const newCompany = await this.repository.save(company);

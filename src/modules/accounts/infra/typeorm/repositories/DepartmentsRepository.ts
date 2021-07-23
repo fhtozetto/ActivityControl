@@ -18,8 +18,11 @@ class DepartmentsRepository implements IDepartmentsRepository {
     return department;
   }
 
-  async create({ description }: ICreateDepartmentDTO): Promise<Department> {
-    const department = this.repository.create({ description });
+  async create({
+    account_id,
+    description,
+  }: ICreateDepartmentDTO): Promise<Department> {
+    const department = this.repository.create({ account_id, description });
 
     await this.repository.save(department);
 

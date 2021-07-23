@@ -6,6 +6,7 @@ import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
   id?: string;
+  account_id: string;
   description: string;
 }
 
@@ -16,7 +17,7 @@ class CreateDepartmentUseCase {
     private departmentsRepository: IDepartmentsRepository,
   ) {}
 
-  async execute({ description }: IRequest): Promise<Department> {
+  async execute({ account_id, description }: IRequest): Promise<Department> {
     const departmentAlreadyExists = await this.departmentsRepository.findByName(
       description,
     );
@@ -25,7 +26,10 @@ class CreateDepartmentUseCase {
       throw new AppError('department already exists!');
     }
 
-    const department = await this.departmentsRepository.create({ description });
+    const department = await this.departmentsRepository.create({
+      account_id,
+      description,
+    });
     return department;
   }
 }

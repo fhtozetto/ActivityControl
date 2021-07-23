@@ -17,9 +17,10 @@ class GroupsRepository implements IGroupsRepository {
 
     return group;
   }
-  async create({ id, name }: ICreateGroupDTO): Promise<Group> {
+  async create({ id, account_id, name }: ICreateGroupDTO): Promise<Group> {
     const group = this.repository.create({
       id,
+      account_id,
       name,
     });
 

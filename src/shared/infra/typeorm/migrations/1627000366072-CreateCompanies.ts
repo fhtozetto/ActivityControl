@@ -1,21 +1,34 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class CreateDepartments1626566027122 implements MigrationInterface {
+export class CreateCompanies1627000366072 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'departments',
+        name: 'companies',
         columns: [
           {
             name: 'id',
-            type: 'varchar',
+            type: 'uuid',
+            isPrimary: true,
           },
           {
             name: 'account_id',
             type: 'uuid',
           },
           {
-            name: 'description',
+            name: 'group_id',
+            type: 'uuid',
+          },
+          {
+            name: 'code_name',
+            type: 'varchar',
+          },
+          {
+            name: 'name',
+            type: 'varchar',
+          },
+          {
+            name: 'cnpj',
             type: 'varchar',
           },
           {
@@ -26,7 +39,13 @@ export class CreateDepartments1626566027122 implements MigrationInterface {
         ],
         foreignKeys: [
           {
-            name: 'FKDepartmentAccount',
+            name: 'FKCompanyGroup',
+            referencedTableName: 'groups',
+            referencedColumnNames: ['id'],
+            columnNames: ['group_id'],
+          },
+          {
+            name: 'FKCompanyAccount',
             referencedTableName: 'accounts',
             referencedColumnNames: ['id'],
             columnNames: ['account_id'],
@@ -37,6 +56,6 @@ export class CreateDepartments1626566027122 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('departments');
+    await queryRunner.dropTable('companies');
   }
 }

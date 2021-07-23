@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class CreateCompanies1625441004896 implements MigrationInterface {
+export class CreateGroup1626525392963 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'companies',
+        name: 'groups',
         columns: [
           {
             name: 'id',
@@ -12,15 +12,11 @@ export class CreateCompanies1625441004896 implements MigrationInterface {
             isPrimary: true,
           },
           {
-            name: 'code_name',
-            type: 'varchar',
+            name: 'account_id',
+            type: 'uuid',
           },
           {
             name: 'name',
-            type: 'varchar',
-          },
-          {
-            name: 'cnpj',
             type: 'varchar',
           },
           {
@@ -29,11 +25,19 @@ export class CreateCompanies1625441004896 implements MigrationInterface {
             default: 'now()',
           },
         ],
+        foreignKeys: [
+          {
+            name: 'FKGroupAccount',
+            referencedTableName: 'accounts',
+            referencedColumnNames: ['id'],
+            columnNames: ['account_id'],
+          },
+        ],
       }),
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('companies');
+    await queryRunner.dropTable('group');
   }
 }

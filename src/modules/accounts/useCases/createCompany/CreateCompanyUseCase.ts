@@ -6,8 +6,10 @@ import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
   id: string;
-  code_name: string;
+  account_id: string;
+  group_id: string;
   name: string;
+  code_name: string;
   cnpj: string;
 }
 
@@ -18,7 +20,14 @@ class CreateCompanyUseCase {
     private companiesRepository: ICompaniesRepository,
   ) {}
 
-  async execute({ id, code_name, name, cnpj }: IRequest): Promise<Company> {
+  async execute({
+    id,
+    account_id,
+    group_id,
+    name,
+    code_name,
+    cnpj,
+  }: IRequest): Promise<Company> {
     const companyAlreadyExists = await this.companiesRepository.findByCNPJ(
       cnpj,
     );
@@ -29,8 +38,10 @@ class CreateCompanyUseCase {
 
     const company = await this.companiesRepository.create({
       id,
-      code_name,
+      account_id,
+      group_id,
       name,
+      code_name,
       cnpj,
     });
 
