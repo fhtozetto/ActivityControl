@@ -9,7 +9,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 ## Cadastro de conta
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar uma conta.
-- [ ] Deve ser possível alterar os dados de uma conta.
+- [x] Deve ser possível alterar os dados de uma conta.
 
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de conta.
