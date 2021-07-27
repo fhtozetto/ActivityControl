@@ -20,7 +20,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 ## Cadastro de grupo
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um grupo.
-- [ ] Deve ser possível alterar os dados de um grupo.
+- [x] Deve ser possível alterar os dados de um grupo.
 - [ ] Deve ser possível excluir um grupo. 
 
 **Requisitos Não Funcionais (RNF)**
@@ -53,7 +53,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 ## Cadastro de Departamentos
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um novo departamento.
-- [ ] Deve ser possível alterar o cadastro da departamento.
+- [x] Deve ser possível alterar o cadastro da departamento.
 - [ ] Deve ser possível localizar um departamento pelo nome.
 
 **Requisitos Não Funcionais (RNF)**

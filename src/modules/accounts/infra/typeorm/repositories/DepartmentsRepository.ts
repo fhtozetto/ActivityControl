@@ -19,10 +19,11 @@ class DepartmentsRepository implements IDepartmentsRepository {
   }
 
   async create({
+    id,
     account_id,
     description,
   }: ICreateDepartmentDTO): Promise<Department> {
-    const department = this.repository.create({ account_id, description });
+    const department = this.repository.create({ id, account_id, description });
 
     await this.repository.save(department);
 
