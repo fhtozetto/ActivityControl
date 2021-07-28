@@ -10,12 +10,15 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar uma conta.
 - [x] Deve ser possível alterar os dados de uma conta.
+- [ ] Deve ser Possível apagar uma conta.
 
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de conta.
 - [ ] Criar teste de integração do cadastro de conta.
 - [ ] Criar teste unitário para o alteração de conta.
 - [ ] Criar teste de integração para alteração de conta.
+- [ ] Criar teste unitário para apagar uma conta.
+- [ ] Criar teste de integração para apagar uma conta.
 
 ## Cadastro de grupo
 **Requisitos Funcionais (RF)**
@@ -28,6 +31,8 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 - [ ] Criar teste de integração do cadastro de grupo.
 - [ ] Criar teste unitário para o alteração de grupo.
 - [ ] Criar teste de integração para alteração de grupo.
+- [ ] Criar teste unitário para apagar um grupo.
+- [ ] Criar teste de integração para apagar um grupo.
 
 **Regra de Negócios (RN)**
 - [ ] só será possível excluir um grupo caso ele não tenha registros vinculados 
@@ -44,6 +49,8 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 - [ ] Criar teste de integração do cadastro de empresa.
 - [ ] Criar teste unitário para o alteração de empresa.
 - [ ] Criar teste de integração para alteração de empresa.
+- [ ] Criar teste unitário para apagar uma empresa.
+- [ ] Criar teste de integração para apagar uma empresa.
 - [ ] Criar teste unitário para localizar empresa.
 - [ ] Criar teste de integração para localizar empresa.
 
@@ -54,6 +61,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um novo departamento.
 - [x] Deve ser possível alterar o cadastro da departamento.
+- [ ] Deve ser possível apagar um departamento.
 - [ ] Deve ser possível localizar um departamento pelo nome.
 
 **Requisitos Não Funcionais (RNF)**
@@ -61,6 +69,8 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 - [ ] Criar teste de integração para o cadastro de departamento.
 - [ ] Criar teste unitário para o alteração de departamento.
 - [ ] Criar teste de integração para alteração de departamento.
+- [ ] Criar teste unitário para apagar uma departamento.
+- [ ] Criar teste de integração para apagar uma departamento.
 - [ ] Criar teste unitário para localizar departamento.
 - [ ] Criar teste de integração para localizar departamento.
 
