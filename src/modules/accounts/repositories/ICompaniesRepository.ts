@@ -9,9 +9,9 @@ interface ICompaniesRepository {
     code_name,
     cnpj,
   }: ICreateCompanyDTO): Promise<Company>;
+  deleteById(id: string): Promise<void>;
   findById(id: string): Promise<Company>;
   findByCNPJ(cnpj: string): Promise<Company>;
-  deleteById(id: string): Promise<void>;
 }
 
 export { ICompaniesRepository };

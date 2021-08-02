@@ -10,7 +10,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar uma conta.
 - [x] Deve ser possível alterar os dados de uma conta.
-- [ ] Deve ser Possível apagar uma conta.
+- [x] Deve ser Possível apagar uma conta.
 
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de conta.
@@ -27,7 +27,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um grupo.
 - [x] Deve ser possível alterar os dados de um grupo.
-- [ ] Deve ser possível excluir um grupo. 
+- [x] Deve ser possível apagar um grupo. 
 
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de grupo.
@@ -44,6 +44,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar uma nova empresa.
 - [x] Deve ser possível alterar o cadastro da empresa.
+- [x] Deve ser possível apagar uma empresa. 
 - [ ] Deve ser possível localizar uma empresa pelo nome.
 - [x] Deve ser possível localizar uma empresa pelo cnpj.
 
@@ -64,7 +65,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um novo departamento.
 - [x] Deve ser possível alterar o cadastro da departamento.
-- [ ] Deve ser possível apagar um departamento.
+- [X] Deve ser possível apagar um departamento.
 - [ ] Deve ser possível localizar um departamento pelo nome.
 
 **Requisitos Não Funcionais (RNF)**

@@ -34,14 +34,14 @@ class CompaniesRepository implements ICompaniesRepository {
     return newCompany;
   }
 
+  async deleteById(id: string): Promise<void> {
+    await this.repository.delete(id);
+  }
+
   async findById(id: string): Promise<Company> {
     const company = await this.repository.findOne(id);
 
     return company;
-  }
-
-  async deleteById(id: string): Promise<void> {
-    this.repository.delete(id);
   }
 
   async findByCNPJ(cnpj: string): Promise<Company> {

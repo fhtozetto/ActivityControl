@@ -12,11 +12,6 @@ class GroupsRepository implements IGroupsRepository {
     this.repository = getRepository(Group);
   }
 
-  async findByName(name: string): Promise<Group> {
-    const group = this.repository.findOne({ name });
-
-    return group;
-  }
   async create({ id, account_id, name }: ICreateGroupDTO): Promise<Group> {
     const group = this.repository.create({
       id,
@@ -25,6 +20,16 @@ class GroupsRepository implements IGroupsRepository {
     });
 
     await this.repository.save(group);
+
+    return group;
+  }
+
+  async deleteById(id: string): Promise<void> {
+    await this.repository.delete(id);
+  }
+
+  async findByName(name: string): Promise<Group> {
+    const group = this.repository.findOne({ name });
 
     return group;
   }
