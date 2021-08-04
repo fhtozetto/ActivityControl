@@ -6,7 +6,6 @@ import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
   id: string;
-  account_id: string;
   group_id: string;
   name: string;
   code_name: string;
@@ -22,7 +21,6 @@ class CreateCompanyUseCase {
 
   async execute({
     id,
-    account_id,
     group_id,
     name,
     code_name,
@@ -38,7 +36,6 @@ class CreateCompanyUseCase {
 
     const company = await this.companiesRepository.create({
       id,
-      account_id,
       group_id,
       name,
       code_name,

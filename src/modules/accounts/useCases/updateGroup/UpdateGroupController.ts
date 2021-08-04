@@ -5,11 +5,11 @@ import { UpdateGroupUseCase } from './UpdateGroupUseCase';
 
 class UpdateGroupController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { id, account_id, name } = request.body;
+    const { id, name } = request.body;
 
     const updateGroupUseCase = container.resolve(UpdateGroupUseCase);
 
-    await updateGroupUseCase.execute({ id, account_id, name });
+    await updateGroupUseCase.execute({ id, name });
 
     return response.status(204).send();
   }

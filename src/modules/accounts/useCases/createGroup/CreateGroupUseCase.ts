@@ -6,7 +6,6 @@ import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
   id?: string;
-  account_id: string;
   name: string;
 }
 
@@ -17,14 +16,14 @@ class CreateGroupUseCase {
     private groupsRepository: GroupsRepository,
   ) {}
 
-  async execute({ account_id, name }: IRequest): Promise<Group> {
+  async execute({ name }: IRequest): Promise<Group> {
     const groupAlreadyExists = await this.groupsRepository.findByName(name);
 
     if (groupAlreadyExists) {
       throw new AppError('Group already exists!');
     }
 
-    const group = this.groupsRepository.create({ account_id, name });
+    const group = this.groupsRepository.create({ name });
 
     return group;
   }

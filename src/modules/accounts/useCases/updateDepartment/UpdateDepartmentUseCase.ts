@@ -5,7 +5,6 @@ import { IDepartmentsRepository } from '@modules/accounts/repositories/IDepartme
 
 interface IRequest {
   id: string;
-  account_id: string;
   description: string;
 }
 
@@ -16,14 +15,9 @@ class UpdateDepartmentUseCase {
     private departmentsRepository: IDepartmentsRepository,
   ) {}
 
-  async execute({
-    id,
-    account_id,
-    description,
-  }: IRequest): Promise<Department> {
+  async execute({ id, description }: IRequest): Promise<Department> {
     const department = await this.departmentsRepository.create({
       id,
-      account_id,
       description,
     });
 

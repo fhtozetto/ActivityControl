@@ -5,10 +5,10 @@ import { CreateGroupUseCase } from './CreateGroupUseCase';
 
 class CreateGroupController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { account_id, name } = request.body;
+    const { name } = request.body;
 
     const createGroupUseCase = container.resolve(CreateGroupUseCase);
-    const group = await createGroupUseCase.execute({ account_id, name });
+    const group = await createGroupUseCase.execute({ name });
 
     return response.status(201).json(group);
   }

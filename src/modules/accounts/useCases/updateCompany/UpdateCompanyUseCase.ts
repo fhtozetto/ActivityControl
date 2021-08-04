@@ -6,7 +6,6 @@ import { ICompaniesRepository } from '@modules/accounts/repositories/ICompaniesR
 interface IRequest {
   id: string;
   group_id: string;
-  account_id: string;
   code_name: string;
   name: string;
   cnpj: string;
@@ -19,18 +18,10 @@ class UpdateCompanyUseCase {
     private companiesRepository: ICompaniesRepository,
   ) {}
 
-  execute({
-    id,
-    group_id,
-    account_id,
-    code_name,
-    name,
-    cnpj,
-  }: IRequest): Promise<Company> {
+  execute({ id, group_id, code_name, name, cnpj }: IRequest): Promise<Company> {
     const company = this.companiesRepository.create({
       id,
       group_id,
-      account_id,
       code_name,
       name,
       cnpj,

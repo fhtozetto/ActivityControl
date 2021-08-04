@@ -5,12 +5,11 @@ import { CreateDepartmentUseCase } from './CreateDepartmentUseCase';
 
 class CreateDepartmentController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { account_id, description } = request.body;
+    const { description } = request.body;
 
     const createDepartmentsUseCase = container.resolve(CreateDepartmentUseCase);
 
     const department = await createDepartmentsUseCase.execute({
-      account_id,
       description,
     });
 

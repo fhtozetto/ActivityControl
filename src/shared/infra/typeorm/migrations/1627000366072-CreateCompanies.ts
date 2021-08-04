@@ -12,10 +12,6 @@ export class CreateCompanies1627000366072 implements MigrationInterface {
             isPrimary: true,
           },
           {
-            name: 'account_id',
-            type: 'uuid',
-          },
-          {
             name: 'group_id',
             type: 'uuid',
           },
@@ -43,12 +39,6 @@ export class CreateCompanies1627000366072 implements MigrationInterface {
             referencedTableName: 'groups',
             referencedColumnNames: ['id'],
             columnNames: ['group_id'],
-          },
-          {
-            name: 'FKCompanyAccount',
-            referencedTableName: 'accounts',
-            referencedColumnNames: ['id'],
-            columnNames: ['account_id'],
           },
         ],
       }),

@@ -12,10 +12,6 @@ export class CreateGroup1626525392963 implements MigrationInterface {
             isPrimary: true,
           },
           {
-            name: 'account_id',
-            type: 'uuid',
-          },
-          {
             name: 'name',
             type: 'varchar',
           },
@@ -25,19 +21,11 @@ export class CreateGroup1626525392963 implements MigrationInterface {
             default: 'now()',
           },
         ],
-        foreignKeys: [
-          {
-            name: 'FKGroupAccount',
-            referencedTableName: 'accounts',
-            referencedColumnNames: ['id'],
-            columnNames: ['account_id'],
-          },
-        ],
       }),
     );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('group');
+    await queryRunner.dropTable('groups');
   }
 }

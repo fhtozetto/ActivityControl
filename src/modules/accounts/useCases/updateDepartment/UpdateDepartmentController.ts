@@ -5,12 +5,12 @@ import { UpdateDepartmentUseCase } from './UpdateDepartmentUseCase';
 
 class UpdateDepartmentController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { id, account_id, description } = request.body;
+    const { id, description } = request.body;
 
     const updateDepartmentUseCase = container.resolve(UpdateDepartmentUseCase);
-    await updateDepartmentUseCase.execute({ id, account_id, description });
+    await updateDepartmentUseCase.execute({ id, description });
 
-    return response.status(201).send();
+    return response.status(204).send();
   }
 }
 

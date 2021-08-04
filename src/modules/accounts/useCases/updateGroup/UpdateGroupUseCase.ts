@@ -5,7 +5,6 @@ import { IGroupsRepository } from '@modules/accounts/repositories/IGroupReposito
 
 interface IRequest {
   id: string;
-  account_id: string;
   name: string;
 }
 
@@ -16,8 +15,8 @@ class UpdateGroupUseCase {
     private groupsRepository: IGroupsRepository,
   ) {}
 
-  async execute({ id, account_id, name }: IRequest): Promise<Group> {
-    const group = await this.groupsRepository.create({ id, account_id, name });
+  async execute({ id, name }: IRequest): Promise<Group> {
+    const group = await this.groupsRepository.create({ id, name });
 
     return group;
   }

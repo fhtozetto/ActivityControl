@@ -5,14 +5,13 @@ import { UpdateCompanyUseCase } from './UpdateCompanyUseCase';
 
 class UpdateCompanyController {
   async handler(request: Request, response: Response): Promise<Response> {
-    const { id, group_id, account_id, code_name, name, cnpj } = request.body;
+    const { id, group_id, code_name, name, cnpj } = request.body;
 
     const updateCompanyUseCase = container.resolve(UpdateCompanyUseCase);
 
     await updateCompanyUseCase.execute({
       id,
       group_id,
-      account_id,
       code_name,
       name,
       cnpj,

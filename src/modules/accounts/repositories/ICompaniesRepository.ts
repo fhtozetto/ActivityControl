@@ -3,7 +3,6 @@ import { Company } from '../infra/typeorm/entities/Company';
 
 interface ICompaniesRepository {
   create({
-    account_id,
     group_id,
     name,
     code_name,

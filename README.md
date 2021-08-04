@@ -6,23 +6,6 @@ Combinando as melhores práticas de SOLID, testes unitários e testes de integra
 Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas do banco de dados ao concluir o projeto.
 ![Cat](https://raw.githubusercontent.com/fhtozetto/ActivityControl-Backend/master/data_model.png)
 
-## Cadastro de conta
-**Requisitos Funcionais (RF)**
-- [x] Deve ser possível cadastrar uma conta.
-- [x] Deve ser possível alterar os dados de uma conta.
-- [x] Deve ser Possível apagar uma conta.
-
-**Requisitos Não Funcionais (RNF)**
-- [ ] Criar teste unitário do cadastro de conta.
-- [ ] Criar teste de integração do cadastro de conta.
-- [ ] Criar teste unitário para o alteração de conta.
-- [ ] Criar teste de integração para alteração de conta.
-- [ ] Criar teste unitário para apagar uma conta.
-- [ ] Criar teste de integração para apagar uma conta.
-
-**Regra de Negócios (RN)**
-- [ ] só será possível excluir uma conta caso ele não tenha registros vinculados. 
-
 ## Cadastro de grupo
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um grupo.

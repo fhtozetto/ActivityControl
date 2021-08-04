@@ -11,10 +11,6 @@ export class CreateDepartments1626566027122 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'account_id',
-            type: 'uuid',
-          },
-          {
             name: 'description',
             type: 'varchar',
           },
@@ -22,14 +18,6 @@ export class CreateDepartments1626566027122 implements MigrationInterface {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()',
-          },
-        ],
-        foreignKeys: [
-          {
-            name: 'FKDepartmentAccount',
-            referencedTableName: 'accounts',
-            referencedColumnNames: ['id'],
-            columnNames: ['account_id'],
           },
         ],
       }),
