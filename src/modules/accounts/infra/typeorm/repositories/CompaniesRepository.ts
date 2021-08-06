@@ -14,7 +14,6 @@ class CompaniesRepository implements ICompaniesRepository {
 
   async create({
     id,
-    account_id,
     group_id,
     name,
     cnpj,
@@ -22,7 +21,6 @@ class CompaniesRepository implements ICompaniesRepository {
   }: ICreateCompanyDTO): Promise<Company> {
     const company = await this.repository.create({
       id,
-      account_id,
       group_id,
       name,
       cnpj,
@@ -45,7 +43,7 @@ class CompaniesRepository implements ICompaniesRepository {
   }
 
   async findByCNPJ(cnpj: string): Promise<Company> {
-    const company = this.repository.findOne({ cnpj });
+    const company = await this.repository.findOne({ cnpj });
 
     return company;
   }

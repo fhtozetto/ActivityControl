@@ -12,10 +12,9 @@ class GroupsRepository implements IGroupsRepository {
     this.repository = getRepository(Group);
   }
 
-  async create({ id, account_id, name }: ICreateGroupDTO): Promise<Group> {
+  async create({ id, name }: ICreateGroupDTO): Promise<Group> {
     const group = this.repository.create({
       id,
-      account_id,
       name,
     });
 
@@ -29,7 +28,7 @@ class GroupsRepository implements IGroupsRepository {
   }
 
   async findByName(name: string): Promise<Group> {
-    const group = this.repository.findOne({ name });
+    const group = await this.repository.findOne({ name });
 
     return group;
   }
