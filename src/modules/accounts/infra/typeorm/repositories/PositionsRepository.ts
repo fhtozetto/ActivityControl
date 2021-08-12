@@ -33,8 +33,8 @@ class PositionsRepository implements IPositionsRepository {
     return position;
   }
 
-  async findByName(name: string): Promise<Position> {
-    const position = await this.repository.findOne(name);
+  async findByName(description: string): Promise<Position> {
+    const position = await this.repository.findOne({ description });
 
     return position;
   }

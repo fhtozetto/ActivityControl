@@ -8,7 +8,8 @@ export class CreateDepartments1626566027122 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'varchar',
+            type: 'uuid',
+            isPrimary: true,
           },
           {
             name: 'description',

@@ -1,4 +1,4 @@
-class ICreateDepartmentDTO {
+interface ICreateDepartmentDTO {
   id?: string;
   description: string;
 }

@@ -5,7 +5,6 @@ import { GroupsRepository } from '@modules/accounts/infra/typeorm/repositories/G
 import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
-  id?: string;
   name: string;
 }
 

@@ -12,24 +12,20 @@ class DepartmentsRepository implements IDepartmentsRepository {
     this.repository = getRepository(Department);
   }
 
-  async create({
-    id,
-    account_id,
-    description,
-  }: ICreateDepartmentDTO): Promise<Department> {
-    const department = this.repository.create({ id, account_id, description });
+  async create({ id, description }: ICreateDepartmentDTO): Promise<Department> {
+    const department = this.repository.create({ id, description });
 
-    await this.repository.save(department);
+    const newDepartment = await this.repository.save(department);
 
-    return department;
+    return newDepartment;
   }
 
   async deleteById(id: string): Promise<void> {
     await this.repository.delete(id);
   }
 
-  async findByName(name: string): Promise<Department> {
-    const department = await this.repository.findOne(name);
+  async findByName(description: string): Promise<Department> {
+    const department = await this.repository.findOne({ description });
 
     return department;
   }

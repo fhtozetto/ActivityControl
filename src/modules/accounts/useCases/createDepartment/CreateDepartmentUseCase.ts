@@ -5,7 +5,6 @@ import { IDepartmentsRepository } from '@modules/accounts/repositories/IDepartme
 import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
-  id?: string;
   description: string;
 }
 
