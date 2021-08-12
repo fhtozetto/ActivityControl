@@ -21,7 +21,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 - [ ] Criar teste de integração para apagar um grupo.
 
 **Regra de Negócios (RN)**
-- [ ] só será possível excluir um grupo caso ele não tenha registros vinculados.
+- [x] só será possível excluir um grupo caso ele não tenha registros vinculados.
 
 ## Cadastro de Empresas
 **Requisitos Funcionais (RF)**
@@ -63,6 +63,23 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 
 **Regra de Negócios (RN)**
 - [x] Qualquer usuário poderá pesquisar os departamentos. 
+
+## Cadastro de Usuários
+**Requisitos Funcionais (RF)**
+- [ ] Deve ser possível cadastrar um usuário.
+- [ ] Deve ser possível alterar os dados de um usuário.
+- [ ] Deve ser possível apagar um usuário.
+
+**Requisitos Não Funcionais (RNF)**
+- [ ] Criar teste unitário do cadastro de usuário.
+- [ ] Criar teste de integração do cadastro de usuário.
+- [ ] Criar teste unitário para o alteração de usuário.
+- [ ] Criar teste de integração para alteração de usuário.
+- [ ] Criar teste unitário para apagar um usuário.
+- [ ] Criar teste de integração para apagar um usuário.
+
+**Regra de Negócios (RN)**
+- [ ] só será possível excluir um usuário caso ele não tenha registros vinculados.
 
 
 ---
