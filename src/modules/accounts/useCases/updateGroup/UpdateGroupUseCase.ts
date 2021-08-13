@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
 import { Group } from '@modules/accounts/infra/typeorm/entities/Group';
-import { IGroupsRepository } from '@modules/accounts/repositories/IGroupRepository';
+import { IGroupsRepository } from '@modules/accounts/repositories/IGroupsRepository';
 
 interface IRequest {
   id: string;

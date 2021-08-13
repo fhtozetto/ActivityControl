@@ -1,15 +1,17 @@
 import { Router } from 'express';
 
-import { companyRoutes } from './company.routes';
-import { departmentRoutes } from './department.routes';
-import { groupRoutes } from './group.routes';
-import { positionRoutes } from './position.routes';
+import { companiesRoutes } from './companies.routes';
+import { departmentsRoutes } from './departments.routes';
+import { groupsRoutes } from './groups.routes';
+import { positionsRoutes } from './positions.routes';
+import { usersRoutes } from './users.routes';
 
 const router = Router();
 
-router.use('/company', companyRoutes);
-router.use('/group', groupRoutes);
-router.use('/department', departmentRoutes);
-router.use('/position', positionRoutes);
+router.use('/companies', companiesRoutes);
+router.use('/groups', groupsRoutes);
+router.use('/departments', departmentsRoutes);
+router.use('/positions', positionsRoutes);
+router.use('/users', usersRoutes);
 
 export { router };

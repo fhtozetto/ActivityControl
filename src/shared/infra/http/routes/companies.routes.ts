@@ -10,11 +10,11 @@ const updateCompanyController = new UpdateCompanyController();
 const deleteCompanyController = new DeleteCompanyController();
 const findCompanyByCnpjController = new FindCompanyByCnpjController();
 
-const companyRoutes = Router();
+const companiesRoutes = Router();
 
-companyRoutes.post('/', createCompanyController.handle);
-companyRoutes.put('/', updateCompanyController.handler);
-companyRoutes.delete('/', deleteCompanyController.handle);
-companyRoutes.get('/cnpj', findCompanyByCnpjController.handle);
+companiesRoutes.post('/', createCompanyController.handle);
+companiesRoutes.put('/', updateCompanyController.handler);
+companiesRoutes.delete('/', deleteCompanyController.handle);
+companiesRoutes.get('/cnpj', findCompanyByCnpjController.handle);
 
-export { companyRoutes };
+export { companiesRoutes };

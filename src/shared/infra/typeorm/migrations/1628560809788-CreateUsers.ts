@@ -14,17 +14,17 @@ export class CreateUsers1628560809788 implements MigrationInterface {
           {
             name: 'company_id',
             type: 'uuid',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'position_id',
             type: 'uuid',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'department_id',
             type: 'uuid',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'email',
@@ -54,6 +54,7 @@ export class CreateUsers1628560809788 implements MigrationInterface {
           {
             name: 'avatar',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'created_at',

@@ -1,7 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
 import { ICreateGroupDTO } from '@modules/accounts/dtos/ICreateGroupDTO';
-import { IGroupsRepository } from '@modules/accounts/repositories/IGroupRepository';
+import { IGroupsRepository } from '@modules/accounts/repositories/IGroupsRepository';
 
 import { Group } from '../entities/Group';
 

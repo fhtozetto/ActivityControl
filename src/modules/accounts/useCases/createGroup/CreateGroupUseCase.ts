@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
 import { Group } from '@modules/accounts/infra/typeorm/entities/Group';
-import { GroupsRepository } from '@modules/accounts/infra/typeorm/repositories/GroupRepository';
+import { GroupsRepository } from '@modules/accounts/infra/typeorm/repositories/GroupsRepository';
 import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {

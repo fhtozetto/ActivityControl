@@ -4,14 +4,14 @@ import { CreatePositionController } from '@modules/accounts/useCases/createPosit
 import { DeletePositionController } from '@modules/accounts/useCases/deletePosition/DeletePositionController';
 import { UpdatePositionController } from '@modules/accounts/useCases/updatePosition/UpdatePositionCotroller';
 
-const positionRoutes = Router();
+const positionsRoutes = Router();
 
 const createPositionController = new CreatePositionController();
 const updatePositionController = new UpdatePositionController();
 const deletePositionController = new DeletePositionController();
 
-positionRoutes.post('/', createPositionController.handle);
-positionRoutes.put('/', updatePositionController.handle);
-positionRoutes.delete('/', deletePositionController.handle);
+positionsRoutes.post('/', createPositionController.handle);
+positionsRoutes.put('/', updatePositionController.handle);
+positionsRoutes.delete('/', deletePositionController.handle);
 
-export { positionRoutes };
+export { positionsRoutes };

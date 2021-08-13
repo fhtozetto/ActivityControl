@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 
-import { GroupsRepository } from '@modules/accounts/infra/typeorm/repositories/GroupRepository';
+import { GroupsRepository } from '@modules/accounts/infra/typeorm/repositories/GroupsRepository';
 
 @injectable()
 class DeleteGroupUseCase {

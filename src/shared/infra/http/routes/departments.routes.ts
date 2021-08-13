@@ -4,14 +4,14 @@ import { CreateDepartmentController } from '@modules/accounts/useCases/createDep
 import { DeleteDepartmentController } from '@modules/accounts/useCases/deleteDepartment/DeleteDepartmentController';
 import { UpdateDepartmentController } from '@modules/accounts/useCases/updateDepartment/UpdateDepartmentController';
 
-const departmentRoutes = Router();
+const departmentsRoutes = Router();
 
 const createDepartmentController = new CreateDepartmentController();
 const updateDepartmentController = new UpdateDepartmentController();
 const deleteDepartmentController = new DeleteDepartmentController();
 
-departmentRoutes.post('/', createDepartmentController.handle);
-departmentRoutes.put('/', updateDepartmentController.handle);
-departmentRoutes.delete('/', deleteDepartmentController.handle);
+departmentsRoutes.post('/', createDepartmentController.handle);
+departmentsRoutes.put('/', updateDepartmentController.handle);
+departmentsRoutes.delete('/', deleteDepartmentController.handle);
 
-export { departmentRoutes };
+export { departmentsRoutes };
