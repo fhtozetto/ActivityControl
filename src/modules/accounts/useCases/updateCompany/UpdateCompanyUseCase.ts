@@ -18,8 +18,14 @@ class UpdateCompanyUseCase {
     private companiesRepository: ICompaniesRepository,
   ) {}
 
-  execute({ id, group_id, code_name, name, cnpj }: IRequest): Promise<Company> {
-    const company = this.companiesRepository.create({
+  async execute({
+    id,
+    group_id,
+    code_name,
+    name,
+    cnpj,
+  }: IRequest): Promise<Company> {
+    const company = await this.companiesRepository.create({
       id,
       group_id,
       code_name,

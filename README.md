@@ -66,9 +66,10 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 
 ## Cadastro de Usuários
 **Requisitos Funcionais (RF)**
-- [ ] Deve ser possível cadastrar um usuário.
-- [ ] Deve ser possível alterar os dados de um usuário.
+- [x] Deve ser possível cadastrar um usuário.
+- [x] Deve ser possível alterar os dados de um usuário.
 - [ ] Deve ser possível apagar um usuário.
+- [ ] Cadastrar o avatar do usuário.
 
 **Requisitos Não Funcionais (RNF)**
 - [ ] Criar teste unitário do cadastro de usuário.
@@ -79,7 +80,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 - [ ] Criar teste de integração para apagar um usuário.
 
 **Regra de Negócios (RN)**
-- [ ] só será possível excluir um usuário caso ele não tenha registros vinculados.
+- [x] só será possível excluir um usuário caso ele não tenha registros vinculados.
 
 
 ---

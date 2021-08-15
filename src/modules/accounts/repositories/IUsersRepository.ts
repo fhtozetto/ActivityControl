@@ -13,8 +13,7 @@ interface IUsersRepository {
     password,
     active,
     admin,
-    avatar, // verificar se é necessário colocar o avatar direto na criação.
-  }: ICreateUserDTO): Promise<User>;
+  }: ICreateUserDTO): Promise<void>;
   deleteById(id: string): Promise<void>;
   findById(id: string): Promise<User>;
   findByUserName(username: string): Promise<User>;

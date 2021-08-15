@@ -14,9 +14,7 @@ class CreateUserController {
       name,
       username,
       password,
-      active,
       admin,
-      avatar,
     } = request.body;
 
     const createUserUseCase = container.resolve(CreateUserUseCase);
@@ -30,9 +28,7 @@ class CreateUserController {
       name,
       username,
       password,
-      active,
       admin,
-      avatar,
     });
 
     return response.status(201).send();

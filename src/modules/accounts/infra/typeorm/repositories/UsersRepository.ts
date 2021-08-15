@@ -23,8 +23,7 @@ class UsersRepository implements IUsersRepository {
     password,
     active,
     admin,
-    avatar,
-  }: ICreateUserDTO): Promise<User> {
+  }: ICreateUserDTO): Promise<void> {
     const user = this.repository.create({
       id,
       company_id,
@@ -36,12 +35,9 @@ class UsersRepository implements IUsersRepository {
       password,
       active,
       admin,
-      avatar,
     });
 
-    const newUser = await this.repository.save(user);
-
-    return newUser;
+    await this.repository.save(user);
   }
 
   async deleteById(id: string): Promise<void> {

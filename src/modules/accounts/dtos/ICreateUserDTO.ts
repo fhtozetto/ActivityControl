@@ -7,8 +7,8 @@ interface ICreateUserDTO {
   name: string;
   username: string;
   password: string;
-  active: boolean;
-  admin: boolean;
+  active?: boolean;
+  admin?: boolean;
   avatar?: string;
 }
 
