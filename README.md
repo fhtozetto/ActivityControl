@@ -68,7 +68,7 @@ Esse modelo abaixo mostra como deverá ficar o relacionamento entre as tabelas d
 **Requisitos Funcionais (RF)**
 - [x] Deve ser possível cadastrar um usuário.
 - [x] Deve ser possível alterar os dados de um usuário.
-- [ ] Deve ser possível apagar um usuário.
+- [x] Deve ser possível apagar um usuário.
 - [ ] Cadastrar o avatar do usuário.
 
 **Requisitos Não Funcionais (RNF)**
