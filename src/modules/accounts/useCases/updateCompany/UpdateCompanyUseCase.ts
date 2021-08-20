@@ -2,6 +2,7 @@ import { inject, injectable } from 'tsyringe';
 
 import { Company } from '@modules/accounts/infra/typeorm/entities/Company';
 import { ICompaniesRepository } from '@modules/accounts/repositories/ICompaniesRepository';
+import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
   id: string;
@@ -25,6 +26,12 @@ class UpdateCompanyUseCase {
     name,
     cnpj,
   }: IRequest): Promise<Company> {
+    const companyExists = await this.companiesRepository.findById(id);
+
+    if (!companyExists) {
+      throw new AppError('Company does not exists!');
+    }
+
     const company = await this.companiesRepository.create({
       id,
       group_id,
