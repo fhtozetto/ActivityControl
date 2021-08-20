@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
-import { UserRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
+import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
 import { AppError } from '@shared/errors/AppError';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -11,10 +11,10 @@ export async function ensureAdmin(
 ) {
   const { id } = request.user;
 
-  const usersRepository = new UserRepository();
+  const usersRepository = new UsersRepository();
   const user = await usersRepository.findById(id);
 
-  if (!user.isAdmin) {
+  if (!user.admin) {
     throw new AppError('User is not admin!');
   }
 

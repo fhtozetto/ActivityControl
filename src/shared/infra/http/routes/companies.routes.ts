@@ -5,6 +5,8 @@ import { DeleteCompanyController } from '@modules/accounts/useCases/deleteCompan
 import { FindCompanyByCnpjController } from '@modules/accounts/useCases/findCompanyByCNPJ/FindCompanyByCnpjController';
 import { UpdateCompanyController } from '@modules/accounts/useCases/updateCompany/UpdateCompanyController';
 
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
+
 const createCompanyController = new CreateCompanyController();
 const updateCompanyController = new UpdateCompanyController();
 const deleteCompanyController = new DeleteCompanyController();
@@ -12,9 +14,17 @@ const findCompanyByCnpjController = new FindCompanyByCnpjController();
 
 const companiesRoutes = Router();
 
-companiesRoutes.post('/', createCompanyController.handle);
-companiesRoutes.put('/', updateCompanyController.handler);
-companiesRoutes.delete('/', deleteCompanyController.handle);
-companiesRoutes.get('/cnpj', findCompanyByCnpjController.handle);
+companiesRoutes.post('/', ensureAuthenticated, createCompanyController.handle);
+companiesRoutes.put('/', ensureAuthenticated, updateCompanyController.handler);
+companiesRoutes.delete(
+  '/',
+  ensureAuthenticated,
+  deleteCompanyController.handle,
+);
+companiesRoutes.get(
+  '/cnpj',
+  ensureAuthenticated,
+  findCompanyByCnpjController.handle,
+);
 
 export { companiesRoutes };

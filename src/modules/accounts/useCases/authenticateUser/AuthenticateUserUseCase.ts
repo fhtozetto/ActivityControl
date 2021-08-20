@@ -2,6 +2,7 @@ import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 import { inject, injectable } from 'tsyringe';
 
+import auth from '@config/auth';
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 
 interface IRequest {
@@ -37,7 +38,7 @@ class AuthenticateUserUseCase {
       throw new Error('Username or password incorrect!');
     }
 
-    const token = sign({}, '296055804f78071c45ee452572b9e248', {
+    const token = sign({}, auth.secret_token, {
       subject: user.id,
       expiresIn: '1d',
     });
