@@ -32,6 +32,11 @@ class GroupsRepository implements IGroupsRepository {
 
     return group;
   }
+
+  async findById(id: string): Promise<Group> {
+    const group = await this.repository.findOne({ id });
+    return group;
+  }
 }
 
 export { GroupsRepository };

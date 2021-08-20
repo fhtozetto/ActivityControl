@@ -29,6 +29,11 @@ class DepartmentsRepository implements IDepartmentsRepository {
 
     return department;
   }
+
+  async findById(id: string): Promise<Department> {
+    const department = await this.repository.findOne({ id });
+    return department;
+  }
 }
 
 export { DepartmentsRepository };
