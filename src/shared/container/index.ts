@@ -6,11 +6,13 @@ import { DepartmentsRepository } from '@modules/accounts/infra/typeorm/repositor
 import { GroupsRepository } from '@modules/accounts/infra/typeorm/repositories/GroupsRepository';
 import { PositionsRepository } from '@modules/accounts/infra/typeorm/repositories/PositionsRepository';
 import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
+import { UsersTokensRepository } from '@modules/accounts/infra/typeorm/repositories/UsersTokensRepository';
 import { ICompaniesRepository } from '@modules/accounts/repositories/ICompaniesRepository';
 import { IDepartmentsRepository } from '@modules/accounts/repositories/IDepartmentsRepository';
 import { IGroupsRepository } from '@modules/accounts/repositories/IGroupsRepository';
 import { IPositionsRepository } from '@modules/accounts/repositories/IPositionsRepository';
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
+import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
 
 container.registerSingleton<ICompaniesRepository>(
   'CompaniesRepository',
@@ -35,4 +37,9 @@ container.registerSingleton<IPositionsRepository>(
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository,
+);
+
+container.registerSingleton<IUsersTokensRepository>(
+  'UsersTokensRepository',
+  UsersTokensRepository,
 );
