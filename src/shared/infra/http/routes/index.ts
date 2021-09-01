@@ -4,6 +4,7 @@ import { authenticateRoutes } from './authenticate.routes';
 import { companiesRoutes } from './companies.routes';
 import { departmentsRoutes } from './departments.routes';
 import { groupsRoutes } from './groups.routes';
+import { passwordRoutes } from './password.routes';
 import { positionsRoutes } from './positions.routes';
 import { usersRoutes } from './users.routes';
 
@@ -15,5 +16,6 @@ router.use('/departments', departmentsRoutes);
 router.use('/positions', positionsRoutes);
 router.use('/users', usersRoutes);
 router.use(authenticateRoutes);
+router.use('/password', passwordRoutes);
 
 export { router };

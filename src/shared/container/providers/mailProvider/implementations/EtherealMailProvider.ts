@@ -41,7 +41,7 @@ class EtherealMailProvider implements IMailProvider {
 
     const message = await this.client.sendMail({
       to,
-      from: 'Rentx <noreplay@rentx.com.br>',
+      from: 'Activity Control <noreplay@activitycontrol.com.br>',
       subject,
       html: templateHTML,
     });
